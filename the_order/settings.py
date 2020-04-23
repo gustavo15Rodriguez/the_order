@@ -37,6 +37,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # Own apps
+    'apps.food_truck',
+    'apps.invoice',
+    'apps.observations',
+    'apps.order',
+    'apps.product',
+    'apps.state',
 ]
 
 MIDDLEWARE = [
@@ -74,11 +81,15 @@ WSGI_APPLICATION = 'the_order.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'the_order',
+            'USER': 'gustavo',
+            'PASSWORD': '12345qwe',
+            'HOST': 'localhost',
+            'PORT': '3306',
+        }
     }
-}
 
 
 # Password validation
