@@ -1,0 +1,49 @@
+{% extends 'base/index.html' %}
+
+{% block content %}
+  <div class="container cta-100 ">
+    <div class="container">
+      <div class="row blog">
+        <div class="col-md-12">
+          {% if object_list %}
+            <div class="row">
+              <div class="col-md-12">
+                <div class="row">
+                  {% for product in object_list %}
+                    <div class="col-md-4" >
+                      <div class="item-box-blog">
+                        <div class="item-box-blog-image">
+                            <!--Image-->
+                            <figure> <img alt="" src="{{ product.image.url }}"> </figure>
+                        </div>
+                        <div class="item-box-blog-body">
+                            <!--Heading-->
+                          <div class="item-box-blog-heading">
+                            <a href="#" tabindex="0">
+                              <h5>{{ product.name }}</h5>
+                            </a>
+                          </div>
+                          <div class="item-box-blog-data" style="padding: px 15px;">
+                            <p><i class="fa fa-user-o"></i> Cantidad: <i class="fa fa-comments-o"></i>{{ product.quantity }}</p>
+                          </div>
+                          <div class="item-box-blog-text">
+                            <p>${{ product.price }}</p>
+                          </div>
+                          <div class="mt"> <a href="#" tabindex="0" class="btn bg-blue-ui white read">Comprar</a> </div>
+                        </div>
+                      </div>
+                    </div>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          {% else %}
+            <div class="container">
+              <h3 class="text-info text-center">Aun no hay productos disponibles</h3>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock content %}

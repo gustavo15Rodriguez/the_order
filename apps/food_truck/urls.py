@@ -3,8 +3,8 @@ from django.urls import path
 from apps.food_truck import views
 
 urlpatterns = [
-    path('', views.CreateFoodTruck.as_view(), name='food_truck_create'),
-    path('food_truck_list/', views.CreateFoodTruck.as_view(), name='food_truck_list'),
-    path('food_truck_update/', views.CreateFoodTruck.as_view(), name='food_truck_update'),
-    path('food_truck_delete/', views.CreateFoodTruck.as_view(), name='food_truck_delete'),
+    path('create_food_truck/', views.CreateFoodTruck.as_view(), name='create_food_truck'),
+    path('list_food_truck/', views.ListFoodTruck.as_view(), name='list_food_truck'),
+    path('update_food_truck/', views.UpdateFoodTruck.as_view(), name='update_food_truck'),
+    path('delete_food_truck/', views.DeleteFoodTruck.as_view(), name='delete_food_truck'),
 ]

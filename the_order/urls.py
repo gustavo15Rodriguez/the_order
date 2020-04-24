@@ -18,8 +18,12 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
 
+from the_order import views
+
 urlpatterns = [
+    # path('', views.Index.as_view(), name="index"),
     path('food_truck/', include('apps.food_truck.urls')),
+    path('', include('apps.product.urls')),
     path('admin/', admin.site.urls),
 ]
 
