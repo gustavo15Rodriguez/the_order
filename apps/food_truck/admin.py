@@ -1,3 +1,5 @@
 from django.contrib import admin
 
-# Register your models here.
+from apps.food_truck.models import FoodTruck
+
+admin.site.register(FoodTruck)
