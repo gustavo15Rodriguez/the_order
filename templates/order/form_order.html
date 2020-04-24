@@ -1,0 +1,11 @@
+{% block content %}
+    <div class="container">
+        <form method="post">{% csrf_token %}
+            <h3 class="text-center">Orden</h3>
+            <br>
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary">Generar pedido</button>
+            <a href="{% url 'list_product' %}" class="btn btn-success">Listar productos</a>
+        </form>
+    </div>
+{% endblock content %}

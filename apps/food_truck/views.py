@@ -1,6 +1,4 @@
-from django.shortcuts import render
 from django.views.generic import CreateView, ListView, UpdateView, DeleteView
-from django.views.generic.base import View
 
 from apps.food_truck.forms import FoodTruckForm
 from apps.food_truck.models import FoodTruck

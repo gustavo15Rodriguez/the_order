@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     # Own apps
     'apps.food_truck',
     'apps.invoice',
-    'apps.observations',
     'apps.order',
     'apps.product',
     'apps.state',
