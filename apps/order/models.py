@@ -17,4 +17,4 @@ class Order(models.Model):
     observations = models.CharField(max_length=3, choices=OBSERVATIONS, default='WS')
 
     def __str__(self):
-        return self.product
+        return self.username

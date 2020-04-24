@@ -12,6 +12,7 @@ class OrderForm(forms.ModelForm):
         labels = {
             'username': 'Quien lo solicita',
             'product': 'Nombre del producto',
+            'quantity': 'Cantidad',
             'observations': 'Observaciones',
         }
 

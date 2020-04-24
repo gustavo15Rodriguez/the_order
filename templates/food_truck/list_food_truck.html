@@ -6,7 +6,7 @@
       <img alt="" src="{{ restaurant.logo.url }}">
       <hr class="my-4">
       <p class="lead">
-      <a class="btn btn-primary btn-lg" href="#product" role="button">Ver productos</a>
+      <a class="btn btn-primary btn-lg" href="{% url 'list_product' %}" role="button">Ver productos</a>
       </p>
     </div>
   {% endfor %}

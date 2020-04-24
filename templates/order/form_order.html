@@ -1,3 +1,5 @@
+{% extends 'base/index.html '%}
+
 {% block content %}
     <div class="container">
         <form method="post">{% csrf_token %}
@@ -5,7 +7,7 @@
             <br>
             {{ form.as_p }}
             <button type="submit" class="btn btn-primary">Generar pedido</button>
-            <a href="{% url 'list_product' %}" class="btn btn-success">Listar productos</a>
+            <a href="{% url 'list_product' %}" class="btn btn-success">Cancelar</a>
         </form>
     </div>
 {% endblock content %}

@@ -27,7 +27,7 @@
                 <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#product">Productos</a>
+                <a class="nav-link" href="{% url 'list_product' %}">Productos</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Sobre nosotros</a>
@@ -46,7 +46,7 @@
             <h1 class="text-center" style="font-family:helvética;"><strong>The order</strong></h1>
           <hr class="my-4">
           <p class="text-center">
-          <a class="btn btn-primary btn-lg" href="#product" role="button">Ver productos</a>
+          <a class="btn btn-primary btn-lg" href="{% url 'list_product' %}" role="button">Ver productos</a>
           </p>
         </div>
     {% endblock jumbotron %}
